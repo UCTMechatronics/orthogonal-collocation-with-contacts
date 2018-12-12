@@ -1,0 +1,9 @@
+Equations
+dynamicsth1(n,p)
+dynamicsth2(n,p)
+;
+
+dynamicsth1(n,p)$(ord(n) gt 1 or ord(p) eq card(p)).. 0 =e= In("l1")*ddq(n,p,"th1") + power(len("l1"),2)*ddq(n,p,"th1")*m("l2")*power(cos(q(n,p,"th1")),2) + power(len("l1"),2)*ddq(n,p,"th1")*m("l2")*power(sin(q(n,p,"th1")),2) + ddq(n,p,"th1")*m("l1")*power(clen("l1"),2)*power(cos(q(n,p,"th1")),2) + ddq(n,p,"th1")*m("l1")*power(clen("l1"),2)*power(sin(q(n,p,"th1")),2) + len("l1")*g*m("l2")*sin(q(n,p,"th1")) + g*m("l1")*clen("l1")*sin(q(n,p,"th1")) - len("l1")*power(dq(n,p,"th2"),2)*m("l2")*clen("l2")*cos(q(n,p,"th1"))*sin(q(n,p,"th2")) + len("l1")*power(dq(n,p,"th2"),2)*m("l2")*clen("l2")*cos(q(n,p,"th2"))*sin(q(n,p,"th1")) + len("l1")*ddq(n,p,"th2")*m("l2")*clen("l2")*cos(q(n,p,"th1"))*cos(q(n,p,"th2")) + len("l1")*ddq(n,p,"th2")*m("l2")*clen("l2")*sin(q(n,p,"th1"))*sin(q(n,p,"th2")) 
+- tau_c(n) - tau_j(n,p);
+dynamicsth2(n,p)$(ord(n) gt 1 or ord(p) eq card(p)).. 0 =e= In("l2")*ddq(n,p,"th2") + ddq(n,p,"th2")*m("l2")*power(clen("l2"),2)*power(cos(q(n,p,"th2")),2) + ddq(n,p,"th2")*m("l2")*power(clen("l2"),2)*power(sin(q(n,p,"th2")),2) + g*m("l2")*clen("l2")*sin(q(n,p,"th2")) + len("l1")*power(dq(n,p,"th1"),2)*m("l2")*clen("l2")*cos(q(n,p,"th1"))*sin(q(n,p,"th2")) - len("l1")*power(dq(n,p,"th1"),2)*m("l2")*clen("l2")*cos(q(n,p,"th2"))*sin(q(n,p,"th1")) + len("l1")*ddq(n,p,"th1")*m("l2")*clen("l2")*cos(q(n,p,"th1"))*cos(q(n,p,"th2")) + len("l1")*ddq(n,p,"th1")*m("l2")*clen("l2")*sin(q(n,p,"th1"))*sin(q(n,p,"th2")) 
+- tau_j(n,p);
